@@ -1,18 +1,20 @@
 import { useState } from "react";
 import GeoLocationCard from "./components/GeoLocationCard";
 import { PrivacyNotice } from "./components/PrivacyNotice";
-import { Appwrapper } from "./components/Appwrapper";
+import { AppWrapper } from "./components/AppWrapper";
 import { Button } from "./components/Button";
 
 function App() {
   const [showLocation, setShowLocation] = useState(false);
 
   return (
-    <Appwrapper>
+    <AppWrapper>
       {!showLocation && <Button setShowLocation={() => setShowLocation(true)} />}
       <div className="w-full flex justify-center">{showLocation && <GeoLocationCard />}</div>
-      <PrivacyNotice />
-    </Appwrapper>
+      <div className="align-self-bottom">
+        <PrivacyNotice />
+      </div>
+    </AppWrapper>
   );
 }
 
