@@ -4,9 +4,12 @@ export const PrivacyNotice = () => {
       <svg className="w-6 h-6 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01M21 12A9 9 0 1 1 3 12a9 9 0 0 1 18 0ZM12 17h.01" />
       </svg>
-      <span>
-        <strong className="font-semibold">Privacy Notice:</strong> This app does not save, share, or store any of your location data.
-      </span>
+      <div className="flex-1 text-left gap-1.5">
+        <p>
+          <strong className="font-semibold">Privacy Notice:</strong>
+        </p>
+        <p>This app does not save or store any of your location data.</p>
+      </div>
     </div>
   );
 };
